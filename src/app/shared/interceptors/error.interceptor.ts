@@ -41,21 +41,22 @@ export class ErrorInterceptor implements HttpInterceptor {
               //   // this.toasterService.error(s, 'Invalid data', { enableHtml: true, closeButton: true, timeOut: 0, extendedTimeOut: 0 });
               // }
 
-              else if (error.error.message) {
-                if (Array.isArray(error.error.message)) {
-                  const s: string = error.error.message.join('<br/>');
+              else if (error.error.detail) {
+                console.log(error.error.detail)
+                if (Array.isArray(error.error.detail)) {
+                  const s: string = error.error.detail.join('<br/>');
                   this.toasterService.error(s, 'Invalid data', { enableHtml: true });
                 }
 
                 else {
-                  this.toasterService.error(error.error.message);
+                  this.toasterService.error(error.error.detail);
                 }
               }
             }
 
             else if (error.status === 404) {
-              if (error.error.message) {
-                this.toasterService.error('Not Found!', error.error.message);
+              if (error.error.detail) {
+                this.toasterService.error('Not Found!', error.error.detail);
               }
 
               else {

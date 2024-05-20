@@ -3,6 +3,9 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 
 import { IndexComponent } from './index/index.component';
 import { HomeComponent } from './home/home.component';
+import { DeviceListingComponent } from './device/device-listing/device-listing.component';
+import { EmpListingComponent } from './emp/emp-listing/emp-listing.component';
+import { RecordListingComponent } from './record/record-listing/record-listing.component';
 
 const routes: Routes = [
   {
@@ -12,6 +15,33 @@ const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent
+      },
+      {
+        path: 'device',
+        children: [
+          {
+            path: 'list',
+            component: DeviceListingComponent
+          }
+        ]
+      },
+      {
+        path: 'emp',
+        children: [
+          {
+            path: 'list',
+            component: EmpListingComponent
+          }
+        ]
+      },
+      {
+        path: 'record',
+        children: [
+          {
+            path: 'list',
+            component: RecordListingComponent
+          }
+        ]
       }
     ]
   }

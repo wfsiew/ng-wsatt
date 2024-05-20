@@ -1,0 +1,56 @@
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-12">
+        <h1 class="m-0 text-dark">{{ title }} Listing</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="content">
+  <div class="container-fluid">
+    <div class="card-body">
+      <div class="text-center" *ngIf="isEmpty(list) && !isLoading">
+        <h4>No records found</h4>
+      </div>
+
+      <div class="table-responsive" *ngIf="!isEmpty(list) && !isLoading">
+        <table class="table table-bordered table-hover table-sm">
+          <thead>
+            <tr>
+              <th>Enroll Id</th>
+              <th>Record Time</th>
+              <th>Mode</th>
+              <th>Inout</th>
+              <th>Event</th>
+              <th>Device Serial Num</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let o of list">
+              <td>{{ o.enrollId }}</td>
+              <td>{{ o.recordsTime }}</td>
+              <td>{{ o.mode }}</td>
+              <td>{{ o.intout }}</td>
+              <td>{{ o.event }}</td>
+              <td>{{ o.deviceSerialNum }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card-footer" *ngIf="totalCount" [ngClass]="{'d-none': isLoading}">
+      <div class="float-left pg-label">
+        Page {{ page }} / {{ totalPage }} of {{ totalCount }} record(s)
+      </div>
+      <div class="float-right">
+        <pagination 
+          [totalItems]="totalCount" 
+          [itemsPerPage]="pageSize" 
+          [maxSize]="MAX_PAGE_NUMBERS" 
+          [(ngModel)]="page" 
+          (pageChanged)="pageChanged($event)"></pagination>
+      </div>
+    </div>
+  </div>
+</section>
