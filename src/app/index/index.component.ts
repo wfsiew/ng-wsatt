@@ -56,13 +56,11 @@ export class IndexComponent implements OnInit, OnDestroy {
 
   setMenu() {
     this.setTargetMenu('/main/device', 'device', 'device/list', ['device/list']);
+    this.setTargetMenu('/main/emp', 'emp', 'emp/list', ['emp/list']);
+    this.setTargetMenu('/main/record', 'record', 'record/list', ['record/list']);
   }
 
   setTargetMenu(url: string, targetMenu: string, targetSubmenu: string, matchList: string[]) {
-    if (this.submenu != undefined) {
-      return;
-    }
-
     const x = this.router.url;
     if (x.indexOf(url) >= 0) {
       this.menu = targetMenu;

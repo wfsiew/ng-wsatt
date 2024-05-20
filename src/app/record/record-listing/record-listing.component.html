@@ -29,7 +29,7 @@
           <tbody>
             <tr *ngFor="let o of list">
               <td>{{ o.enrollId }}</td>
-              <td>{{ o.recordsTime }}</td>
+              <td>{{ o.recordsTime | date: 'medium':'UTC' }}</td>
               <td>{{ o.mode }}</td>
               <td>{{ o.intout }}</td>
               <td>{{ o.event }}</td>

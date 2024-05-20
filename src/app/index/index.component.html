@@ -14,19 +14,22 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="#" class="nav-link" (click)="goto('device', 'list')">
+            <a href="#" class="nav-link" (click)="goto('device', 'list')"
+              [ngClass]="{'active': menu === 'device'}">
               <i class="nav-icon far fa-circle"></i>
               <p>Devices</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" (click)="goto('emp', 'list')">
+            <a href="#" class="nav-link" (click)="goto('emp', 'list')"
+              [ngClass]="{'active': menu === 'emp'}">
               <i class="nav-icon far fa-circle"></i>
               <p>Employees</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" (click)="goto('record', 'list')">
+            <a href="#" class="nav-link" (click)="goto('record', 'list')"
+              [ngClass]="{'active': menu === 'record'}">
               <i class="nav-icon far fa-circle"></i>
               <p>Records</p>
             </a>
