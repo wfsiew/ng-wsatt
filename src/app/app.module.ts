@@ -19,7 +19,7 @@ import { EnrollinfoListingComponent } from './enrollinfo/enrollinfo-listing/enro
 
 import { HttpTimeoutInterceptor } from './shared/interceptors/timeout.interceptor';
 import { ErrorInterceptor } from './shared/interceptors/error.interceptor';
-import { MessageService } from '../services/message.service';
+import { MessageService } from 'src/services/message.service';
 import { DeviceService } from './device/services/device.service';
 import { EmpService } from './emp/services/emp.service';
 import { RecordService } from './record/services/record.service';
