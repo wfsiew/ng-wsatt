@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { DeviceListingComponent } from './device/device-listing/device-listing.component';
 import { EmpListingComponent } from './emp/emp-listing/emp-listing.component';
 import { RecordListingComponent } from './record/record-listing/record-listing.component';
+import { EnrollinfoListingComponent } from './enrollinfo/enrollinfo-listing/enrollinfo-listing.component';
 
 const routes: Routes = [
   {
@@ -42,9 +43,19 @@ const routes: Routes = [
             component: RecordListingComponent
           }
         ]
+      },
+      {
+        path: 'enrollinfo',
+        children: [
+          {
+            path: 'list',
+            component: EnrollinfoListingComponent
+          }
+        ]
       }
     ]
-  }
+  },
+  { path: '**', redirectTo: '/main/home' }
 ];
 
 @NgModule({

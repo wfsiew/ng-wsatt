@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { DeviceListingComponent } from './device/device-listing/device-listing.component';
 import { EmpListingComponent } from './emp/emp-listing/emp-listing.component';
 import { RecordListingComponent } from './record/record-listing/record-listing.component';
+import { EnrollinfoListingComponent } from './enrollinfo/enrollinfo-listing/enrollinfo-listing.component';
 
 import { HttpTimeoutInterceptor } from './shared/interceptors/timeout.interceptor';
 import { ErrorInterceptor } from './shared/interceptors/error.interceptor';
@@ -22,6 +23,7 @@ import { MessageService } from '../services/message.service';
 import { DeviceService } from './device/services/device.service';
 import { EmpService } from './emp/services/emp.service';
 import { RecordService } from './record/services/record.service';
+import { EnrollinfoService } from './enrollinfo/services/enrollinfo.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { RecordService } from './record/services/record.service';
     HomeComponent,
     DeviceListingComponent,
     EmpListingComponent,
-    RecordListingComponent
+    RecordListingComponent,
+    EnrollinfoListingComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,7 @@ import { RecordService } from './record/services/record.service';
     DeviceService,
     EmpService,
     RecordService,
+    EnrollinfoService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ErrorInterceptor,

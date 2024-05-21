@@ -18,22 +18,14 @@
         <table class="table table-bordered table-hover table-sm">
           <thead>
             <tr>
-              <th>Enroll Id</th>
-              <th>Record Time</th>
-              <th>Mode</th>
-              <th>Inout</th>
-              <th>Event</th>
-              <th>Device Serial Num</th>
+              <th>Id</th>
+              <th>Name</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let o of list">
-              <td>{{ o.enrollId }}</td>
-              <td>{{ o.recordsTime | date: 'dd MMM y hh:mm:ss a':'UTC' }}</td>
-              <td>{{ o.mode }}</td>
-              <td>{{ o.intout }}</td>
-              <td>{{ o.event }}</td>
-              <td>{{ o.deviceSerialNum }}</td>
+              <td>{{ o.id }}</td>
+              <td>{{ o.name }}</td>
             </tr>
           </tbody>
         </table>

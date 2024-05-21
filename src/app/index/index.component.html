@@ -34,6 +34,13 @@
               <p>Records</p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" (click)="goto('enrollinfo', 'list')"
+              [ngClass]="{'active': menu === 'enrollinfo'}">
+              <i class="nav-icon far fa-circle"></i>
+              <p>Enroll Info</p>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
