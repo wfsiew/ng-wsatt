@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { MessageService } from '../../services/message.service';
-import { AppConstant } from '../shared/constants/app.constant';
-import { environment } from '../../environments/environment';
+import { MessageService } from 'src/services/message.service';
+import { AppConstant } from 'src/app/shared/constants/app.constant';
+import { environment } from 'src/environments/environment';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({

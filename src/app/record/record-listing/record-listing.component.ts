@@ -4,10 +4,10 @@ import { Subscription } from 'rxjs';
 
 import { ToastrService } from 'ngx-toastr';
 
-import { RecordService } from '../services/record.service';
-import { MessageService } from '../../../services/message.service';
-import { AppConstant } from '../../../app/shared/constants/app.constant';
-import { Helper } from '../../../app/shared/utils/helper';
+import { RecordService } from 'src/app/record/services/record.service';
+import { MessageService } from 'src/services/message.service';
+import { AppConstant } from 'src/app/shared/constants/app.constant';
+import { Helper } from 'src/app/shared/utils/helper';
 
 @Component({
   selector: 'app-record-listing',

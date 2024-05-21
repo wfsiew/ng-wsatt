@@ -4,10 +4,10 @@ import { Subscription } from 'rxjs';
 
 import { ToastrService } from 'ngx-toastr';
 
-import { DeviceService } from '../services/device.service';
-import { MessageService } from '../../../services/message.service';
-import { AppConstant } from '../../../app/shared/constants/app.constant';
-import { Helper } from '../../../app/shared/utils/helper';
+import { DeviceService } from 'src/app/device/services/device.service';
+import { MessageService } from 'src/services/message.service';
+import { AppConstant } from 'src/app/shared/constants/app.constant';
+import { Helper } from 'src/app/shared/utils/helper';
 
 @Component({
   selector: 'app-device-listing',
