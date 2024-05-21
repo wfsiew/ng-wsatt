@@ -15,6 +15,6 @@ export class RecordService {
     let prm: HttpParams = new HttpParams()
       .set('page', page)
       .set('limit', limit);
-    return this.http.get(`${this.baseUrl}/records`, { params: prm, observe: 'response' })
+    return this.http.get(`${this.baseUrl}/records`, { params: prm, observe: 'response' });
   }
 }
